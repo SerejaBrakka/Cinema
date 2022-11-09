@@ -1,0 +1,27 @@
+.accordeonIcon,
+.accordeonIcon_hide {
+  width: 25px;
+  height: 20px;
+  transition: all 0.8s cubic-bezier(0, 0, 0, 0);
+}
+
+.accordeonIcon,
+.accordeonIcon_hide:hover {
+  cursor: pointer;
+}
+
+.accordeonIcon_hide {
+  transform: rotate(180deg);
+}
+
+.accordeon_wrapper,
+.accordeon_wrapper_hide {
+  box-sizing: border-box;
+  width: 300px;
+  display: flex;
+}
+
+.accordeon_wrapper_hide {
+  justify-content: flex-end;
+  border-right: 2px solid var(--color-gray);
+}

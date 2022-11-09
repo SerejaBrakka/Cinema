@@ -1,0 +1,17 @@
+.input {
+  width: 250px;
+  background: url(./img/search.svg) no-repeat;
+  background-position: 90% 15px;
+  background-size: 25px;
+  border: 2px solid var(--color-gray);
+  opacity: 0.8;
+  border-radius: var(--br-high);
+  height: 30px;
+  padding: var(--space-middle);
+  color: var(--color-gray);
+  transition: 1s all;
+}
+
+.input:focus {
+  background: transparent;
+}

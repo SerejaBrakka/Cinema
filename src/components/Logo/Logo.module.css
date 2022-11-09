@@ -1,0 +1,12 @@
+.header__container_logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 90%;
+  height: 200px;
+  background: url(../../assets/logo/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: var(--space-high);
+}
