@@ -1,0 +1,32 @@
+.header__container_icon {
+  width: 30px;
+  height: 30px;
+  margin-right: var(--space-small);
+}
+
+.header__container_items {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header__container_items svg {
+  width: 25px;
+  height: 25px;
+  transition: var(--transition-standart);
+}
+.header__container_items:hover svg {
+  stroke: var(--color-red);
+}
+.header__container_items:active svg {
+  stroke: var(--color-blue);
+}
+
+.span {
+  margin-left: var(--space-middle);
+}
+
+.wrapper h3 {
+  margin-top: var(--space-middle);
+  margin-block-end: var(--space-small);
+}

@@ -1,0 +1,26 @@
+.wrapper {
+  position: relative;
+  width: 60vw;
+}
+.card__container {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__img {
+  width: 160px;
+  height: 200px;
+  border-radius: var(--br-high);
+}
+
+.card {
+  min-width: 170px;
+  margin-right: 20px;
+  transition: 1s;
+  margin-top: var(--space-high);
+}
+.button__container {
+  position: absolute;
+  top: 50px;
+}

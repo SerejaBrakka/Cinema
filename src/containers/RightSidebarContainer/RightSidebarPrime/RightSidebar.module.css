@@ -1,0 +1,17 @@
+.wrapper {
+  width: 35vw;
+  padding: var(--space-high);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  row-gap: 30px;
+  font-family: var(--font-family-main);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}

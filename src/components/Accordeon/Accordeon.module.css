@@ -2,7 +2,9 @@
 .accordeonIcon_hide {
   width: 25px;
   height: 20px;
-  transition: all 0.8s cubic-bezier(0, 0, 0, 0);
+  transition: var(--transition-standart);
+  z-index: 2;
+  margin-top: 18px;
 }
 
 .accordeonIcon,
@@ -17,11 +19,20 @@
 .accordeon_wrapper,
 .accordeon_wrapper_hide {
   box-sizing: border-box;
-  width: 300px;
+  width: 20vw;
   display: flex;
 }
 
 .accordeon_wrapper_hide {
-  justify-content: flex-end;
-  border-right: 2px solid var(--color-gray);
+  justify-content: flex-start;
+  border-right: 2px solid var(--color-black);
+}
+
+@media (max-width: 768px) {
+  .accordeonIcon {
+    display: none;
+  }
+  .accordeonIcon_hide {
+    display: none;
+  }
 }

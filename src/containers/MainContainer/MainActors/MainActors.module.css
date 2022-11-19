@@ -1,0 +1,15 @@
+.acter__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actor__photo {
+  width: 160px;
+  height: 200px;
+  border-radius: var(--br-high);
+}
+
+.card {
+  margin-right: var(--space-high);
+}
+

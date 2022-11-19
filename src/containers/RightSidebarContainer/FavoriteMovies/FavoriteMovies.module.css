@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100%;
+  padding: 0 var(--space-high);
+  box-sizing: border-box;
+  height: 400px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  transition: var(--transition-standart);
+}

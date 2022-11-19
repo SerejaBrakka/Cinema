@@ -2,7 +2,9 @@
   --color-black: black;
   --color-white: white;
   --color-gray: gray;
-
+  --color-blue: blue;
+  --color-red: red;
+  --color-aquamarine: aquamarine;
   --space-small: 5px;
   --space-middle: 10px;
   --space-high: 20px;
@@ -11,8 +13,19 @@
   --br-middle: 15px;
   --br-high: 25px;
 
+  --fontsmall: 12px;
+  --fontmid: 18px;
+
+  --transition-standart: all 0.5s cubic-bezier(0, 0, 0, 0);
+
   --font-family-main: "Roboto", sans-serif;
 }
 body {
-  background: var(--color-black);
+  margin: 0;
+  padding: 0;
+  background: rgb(43, 5, 5);
+  /* background: url(./assets/bg/bgOsn.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: default;
 }

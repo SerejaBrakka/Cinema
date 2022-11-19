@@ -1,0 +1,12 @@
+.app {
+  position: relative;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

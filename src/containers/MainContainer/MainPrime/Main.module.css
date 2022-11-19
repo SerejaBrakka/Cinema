@@ -1,0 +1,15 @@
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-white);
+  padding: var(--space-high);
+  width: 60vw;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .main__container {
+    width: 90%;
+  }
+}

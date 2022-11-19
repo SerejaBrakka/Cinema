@@ -1,12 +1,15 @@
 .header__container_logo {
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 90%;
-  height: 200px;
-  background: url(../../assets/logo/logo.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: var(--space-high);
+  justify-content: flex-start;
+  align-items: center;
+}
+.header__container_logo img {
+  width: 80px;
+}
+.header__container_logo h2 {
+  margin-right: var(--space-middle);
+  letter-spacing: 2px;
+  color: var(--color-white);
+  text-shadow: 6px 6px 10px var(--color-white), 2px 2px 2px var(--color-red),
+    3px 3px 2px var(--color-blue), 4px 4px 2px var(--color-aquamarine);
 }
