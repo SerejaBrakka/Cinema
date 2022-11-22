@@ -6,11 +6,12 @@ const MainActors = () => {
 
   useEffect(() => {
     fetch(
-      "https://api.kinopoisk.dev/person?field=id&search=0-30&token=ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06"
+      "https://api.kinopoisk.dev/person?field=id&search=0-15&limit=15&token=ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06"
     )
       .then((res) => res.json())
       .then((res) => setActors(res.docs));
   }, []);
+  console.log(actors);
   return (
     <div className={classes.wrapper} id="#actors">
       <h4>Best Actors</h4>
@@ -18,7 +19,7 @@ const MainActors = () => {
         {actors ? (
           actors.map((e) => {
             return (
-              <div className={classes.card}>
+              <div className={classes.card} key={e.name}>
                 <p>{e.name}</p>
                 <img
                   src={e.photo}

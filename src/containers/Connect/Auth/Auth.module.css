@@ -1,0 +1,30 @@
+.form__auth {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
+  color: var(--color-white);
+  padding-bottom: var(--space-high);
+}
+
+.form__auth input::placeholder {
+  color: var(--color-white);
+}
+.form__auth input:focus::placeholder {
+  color: var(--color-white);
+}
+
+.form__auth h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form__auth button {
+  margin-top: var(--space-middle);
+}
+

@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <div
       className={classes.accordeon}
-      style={{ width: hideHeader ? "0px" : "300px" }}
+      style={{ width: hideHeader ? "0px" : "250px" }}
     >
       <Accordeon
         hideHeaderHandler={hideHeaderHandler}

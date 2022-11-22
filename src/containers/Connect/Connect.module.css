@@ -1,0 +1,53 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wrapper__form {
+  position: relative;
+  z-index: 1;
+  width: 80vw;
+  height: 70vh;
+  border-image: linear-gradient(
+    90deg,
+    rgba(228, 169, 204, 1) 0%,
+    rgba(242, 15, 61, 1) 85%
+  );
+  border-image-slice: 1;
+  border-width: 10px;
+  border-style: solid;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  background-image: url("https://avrorra.com/wp-content/uploads/2019/05/post_5cd52ae430a04.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: inset -50px 170px 300px black;
+  clip-path: polygon(4% 0, 100% 0%, 96% 100%, 0% 100%);
+}
+.wrapper p {
+  padding-left: var(--space-high);
+}
+
+.logout {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--space-high);
+}
+.logout a {
+  margin-top: var(--space-middle);
+  text-decoration: none;
+  color: var(--color-gray);
+}
+.logout a:hover {
+  color: var(--color-red);
+}

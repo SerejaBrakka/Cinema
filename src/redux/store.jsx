@@ -1,3 +1,7 @@
 import { createStore } from "redux";
 import { TrendingMoviesReducer } from "./reducers/TrendingMoviesReducer";
-export const store = createStore(TrendingMoviesReducer);
+import { combineReducers } from "redux";
+import { UsersReducer } from "./reducers/UsersReducer";
+export const store = createStore(
+  combineReducers({ TrendingMoviesReducer, UsersReducer })
+);

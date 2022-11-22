@@ -3,7 +3,7 @@ import leftArrow from "../img/leftArrow.svg";
 import rightArrow from "../img/rightArrow.svg";
 import classes from "./MainPrimeSlider.module.css";
 import { films } from "../../../dataBase/MainData/MainData";
-import SVGbutton from "../../../components/UI/button/SVGbutton";
+import SVGbutton from "../../../components/UI/button/SVGbutton/SVGbutton";
 const MainPrimeSlider = () => {
   const [count, setCount] = useState(0);
 
@@ -28,19 +28,14 @@ const MainPrimeSlider = () => {
           alt="img"
           className={classes.container_image}
         />
-
         <div className={classes.main__item_info}>
           <h1>{films[count].name}</h1>
           <h4>{films[count].category}</h4>
-          <button className={classes.button}>Watch</button>
+          <button className={classes.button}>Смотреть</button>
         </div>
         <div className={classes.slideButton}>
-          <div onClick={prevSlide} className={classes.buttonNext}>
-            <SVGbutton src={leftArrow} />
-          </div>
-          <div onClick={nextSlide} className={classes.buttonNext}>
-            <SVGbutton src={rightArrow} />
-          </div>
+          <SVGbutton src={leftArrow} onClick={prevSlide} />
+          <SVGbutton src={rightArrow} onClick={nextSlide} />
         </div>
       </div>
     </>

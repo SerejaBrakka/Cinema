@@ -9,6 +9,7 @@ import { ReactComponent as Show } from "./img/show.svg";
 import { ReactComponent as Star } from "./img/star.svg";
 import { ReactComponent as Subscribe } from "./img/subscribe.svg";
 import { ReactComponent as Trend } from "./img/trend.svg";
+import { ReactComponent as Online } from "./img/online.svg";
 
 export const data = [
   {
@@ -16,10 +17,12 @@ export const data = [
       {
         name: "Подписка",
         src: <Subscribe />,
+        to: "/subscribe",
       },
       {
         name: "Войти в профиль",
         src: <Login />,
+        to: "/connect",
       },
     ],
   },
@@ -28,6 +31,7 @@ export const data = [
       {
         name: "Главная",
         src: <Home />,
+        to: "/",
       },
       {
         name: "Тренды",
@@ -45,6 +49,11 @@ export const data = [
   },
   {
     Категории: [
+      {
+        name: "Прямая трансляция",
+        src: <Online />,
+        to: "/online",
+      },
       {
         name: "Сериалы",
         src: <Serial />,

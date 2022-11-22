@@ -13,7 +13,10 @@ const HeaderMapHelper = ({ item }) => {
               {element[1].map((item) => {
                 return (
                   <li key={item.name}>
-                    <Link className={classes.header__container_items}>
+                    <Link
+                      to={item.to}
+                      className={classes.header__container_items}
+                    >
                       {item.src}
                       <span className={classes.span}>{item.name}</span>
                     </Link>

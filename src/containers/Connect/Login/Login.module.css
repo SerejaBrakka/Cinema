@@ -1,0 +1,38 @@
+.reg {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-middle);
+  box-sizing: border-box;
+  color: var(--color-white);
+  font-family: var(--font-family-main);
+}
+.reg a {
+  margin-top: var(--space-middle);
+  text-decoration: none;
+  color: var(--color-gray);
+}
+.reg a:hover {
+  color: var(--color-red);
+}
+.reg h2 {
+  margin-block-start: 0;
+}
+.reg input::placeholder {
+  color: var(--color-white);
+}
+.reg input:focus::placeholder {
+  color: var(--color-white);
+}
+.reg h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.reg button {
+  margin-top: var(--space-middle);
+}

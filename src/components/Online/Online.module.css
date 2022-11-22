@@ -1,0 +1,37 @@
+.wrapper {
+  background-image: url("https://abrakadabra.fun/uploads/posts/2021-12/1639028997_16-abrakadabra-fun-p-kinoteatr-oboi-16.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+}
+
+.wrapper_form {
+  width: 35%;
+  margin-top: 8%;
+  height: 45%;
+  background-color: var(--color-black);
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.wrapper__video {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 10px 50px 40px black, inset 100px 100px 100px black;
+  transform: perspective(700px) rotateX(-7deg);
+}
+
+.wrapper__video {
+  object-fit: cover;
+}
+

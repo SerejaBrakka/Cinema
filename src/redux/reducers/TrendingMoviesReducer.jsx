@@ -8,7 +8,7 @@ export const TrendingMoviesReducer = (state = initialState, action) => {
     case ADD_MOVIES: {
       return {
         ...state,
-        topMovies: action.payload,
+        topMovies: [...state.topMovies, ...action.payload],
       };
     }
     default:

@@ -1,0 +1,26 @@
+.subscribe__wrapper {
+  box-sizing: border-box;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--color-white);
+  margin: 0 auto;
+  font-family: var(--font-family-main);
+  text-align: center;
+  overflow: hidden;
+}
+.info span {
+  font-size: var(--fontmid);
+}
+.info {
+  width: 35vw;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+.subscribe__wrapper button {
+  margin-bottom: var(--space-high);
+}

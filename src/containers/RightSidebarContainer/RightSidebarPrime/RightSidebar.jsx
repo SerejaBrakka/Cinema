@@ -6,7 +6,7 @@ import classes from "./RightSidebar.module.css";
 const RightSidebar = () => {
   return (
     <div className={classes.wrapper}>
-      <Input />
+      <Input placeholder={"Поиск"} />
       <TopMovies />
       <FavoriteMovies />
     </div>

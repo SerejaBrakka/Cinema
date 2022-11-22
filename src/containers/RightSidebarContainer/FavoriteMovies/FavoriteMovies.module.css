@@ -9,3 +9,6 @@
   flex-wrap: nowrap;
   transition: var(--transition-standart);
 }
+.wrapper p {
+  margin-block-start: 0;
+}

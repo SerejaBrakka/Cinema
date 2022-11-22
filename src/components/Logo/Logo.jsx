@@ -4,7 +4,9 @@ const Logo = () => {
   return (
     <div className={classes.header__container_logo}>
       <img src={logotype} />
-      <h2>BRAKKACINEMA</h2>
+      <div>
+        <h2>BRAKKACINEMA</h2>
+      </div>
     </div>
   );
 };

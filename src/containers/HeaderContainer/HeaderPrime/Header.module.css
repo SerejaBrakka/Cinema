@@ -3,7 +3,7 @@
   flex-direction: column;
   color: var(--color-white);
   border-right: 2px solid var(--color-black);
-  width: 20vw;
+  width: 16vw;
   font-family: var(--font-family-main);
   transition: var(--transition-standart);
   box-sizing: border-box;

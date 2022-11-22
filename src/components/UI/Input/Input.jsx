@@ -1,7 +1,15 @@
 import classes from "./Input.module.css";
 
-const Input = () => {
-  return <input className={classes.input} placeholder="Поиск"></input>;
+const Input = ({ placeholder, onChange, value, type }) => {
+  return (
+    <input
+      value={value}
+      onChange={onChange}
+      className={classes.input}
+      placeholder={placeholder}
+      type={type}
+    ></input>
+  );
 };
 
 export default Input;
