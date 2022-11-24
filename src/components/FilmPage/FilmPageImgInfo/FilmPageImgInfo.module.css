@@ -1,0 +1,18 @@
+.imgBig {
+  width: 45vw;
+  height: 60vh;
+  margin: var(--space-high);
+  border-radius: var(--br-high);
+}
+
+.img__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  margin-top: var(--space-high);
+  width: 45vw;
+  height: 60vh;
+  margin-right: var(--space-high);
+}

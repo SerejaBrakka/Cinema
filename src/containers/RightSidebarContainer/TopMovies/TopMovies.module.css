@@ -19,15 +19,22 @@
   width: 50px;
   height: 80px;
   margin-right: var(--space-small);
+  transition: var(--transition-standart);
+  border-radius: var(--br-small);
 }
 
 .card {
+  box-sizing: content-box;
+  text-decoration: none;
   display: flex;
   width: 15%;
   min-width: 140px;
   margin: var(--space-small);
   height: 30%;
+  color: var(--color-white);
+  transition: var(--transition-standart);
 }
+
 .card__info p {
   margin-top: 0;
   margin-bottom: var(--space-small);
@@ -47,6 +54,9 @@
   gap: var(--space-small);
 }
 
+.card:hover {
+  transform: scale(1.05);
+}
 .card:hover {
   cursor: pointer;
 }

@@ -4,6 +4,7 @@ import rightArrow from "../img/rightArrow.svg";
 import classes from "./MainPrimeSlider.module.css";
 import { films } from "../../../dataBase/MainData/MainData";
 import SVGbutton from "../../../components/UI/button/SVGbutton/SVGbutton";
+import { Link } from "react-router-dom";
 const MainPrimeSlider = () => {
   const [count, setCount] = useState(0);
 
@@ -31,11 +32,13 @@ const MainPrimeSlider = () => {
         <div className={classes.main__item_info}>
           <h1>{films[count].name}</h1>
           <h4>{films[count].category}</h4>
-          <button className={classes.button}>Смотреть</button>
+          <Link to={`/film/${films[count].link}`}>
+            <button className={classes.button}>Смотреть</button>
+          </Link>
         </div>
         <div className={classes.slideButton}>
-          <SVGbutton src={leftArrow} onClick={prevSlide} />
-          <SVGbutton src={rightArrow} onClick={nextSlide} />
+          <SVGbutton src={leftArrow} onClick={prevSlide} max={"_"} />
+          <SVGbutton src={rightArrow} onClick={nextSlide} max={"_"} />
         </div>
       </div>
     </>

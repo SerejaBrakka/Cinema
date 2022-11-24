@@ -36,10 +36,6 @@ li a {
   opacity: 0.8;
   transition: var(--transition-standart);
 }
-.content,
-h3 {
-  color: var(--color-gray);
-}
 
 .content li a:hover {
   cursor: pointer;

@@ -1,0 +1,14 @@
+.wrapper {
+  padding: var(--space-high);
+  box-sizing: border-box;
+  font-family: var(--font-family-main);
+  color: var(--color-white);
+  background-position: center top;
+
+  background-size: cover;
+  box-shadow: inset 0 50px 300px 300px var(--color-black);
+}
+.container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+}

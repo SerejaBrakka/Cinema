@@ -1,74 +1,81 @@
 import { useEffect, useRef, useState } from "react";
-import classes from "./MainTrending.module.css";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { AddMoviesAC } from "./../../../redux/action/Actions";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import SVGbutton from "../../../components/UI/button/SVGbutton/SVGbutton";
 import leftArrow from "../../MainContainer/img/leftArrow.svg";
 import rightArrow from "../../MainContainer/img/rightArrow.svg";
+import { AddMoviesAC } from "./../../../redux/action/Actions";
+import classes from "./MainTrending.module.css";
 
-const MainTrending = () => {
+const MainTrending = ({ film, width, name }) => {
   const slider = useRef();
-  let [position, setPosition] = useState(0);
+  let [position, setPositon] = useState(0);
   const dispatch = useDispatch();
   useEffect(() => {
-    fetch(
-      "https://api.kinopoisk.dev/movie?field=rating.kp&search=7-10&field=year&search=2021-2022&field=typeNumber&search=2&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1&limit=50&token=ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06"
-    )
-      .then((res) => res.json())
-      .then((json) => dispatch(AddMoviesAC(json.docs)))
-      .catch((err) => console.log(err));
+    if (!film) {
+      fetch(
+        "https://api.kinopoisk.dev/movie?field=rating.kp&search=8-10&field=year&search=2021-2022&field=typeNumber&search=2&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1&limit=50&token=ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06"
+      )
+        .then((res) => res.json())
+        .then((json) => dispatch(AddMoviesAC(json.docs)))
+        .catch((err) => console.log(err));
+    }
   }, []);
+  const topMovies = useSelector(
+    (state) => state.TrendingMoviesReducer.topMovies
+  );
+  const movies = film ? film : topMovies;
 
   function prevSlide() {
-    setPosition((position += 190));
+    setPositon((position += 190));
+
     slider.current.childNodes.forEach((e) => {
+      console.log(position);
       e.style = `transform:translateX(${position}px)`;
     });
   }
   function nextSlide() {
-    console.log(topMovies.length);
+    setPositon((position -= 190));
 
-    setPosition((position -= 190));
     slider.current.childNodes.forEach((e) => {
+      console.log(position);
       e.style = `transform:translateX(${position}px)`;
     });
   }
-  const topMovies = useSelector(
-    (state) => state.TrendingMoviesReducer.topMovies
-  );
 
   return (
-    <div className={classes.wrapper}>
-      <h4>Тренды</h4>
+    <div className={classes.wrapper} style={{ width: width }}>
+      <h4>{name}</h4>
       <div className={classes.button__container}>
         <SVGbutton
           src={leftArrow}
           position={position}
           onClick={prevSlide}
-          max={0}
+          disabled={position === 0}
         />
         <SVGbutton
           src={rightArrow}
           position={position}
           onClick={nextSlide}
-          max={topMovies.length * -190 + 4 * 190}
+          disabled={position === movies.length * -190}
         />
       </div>
       <div className={classes.card__container} ref={slider}>
-        {topMovies ? (
-          topMovies.map((film, i) => {
+        {movies ? (
+          movies.map((item, i) => {
             return (
-              <div className={classes.card} key={i}>
+              <Link to={`/film/${item.id}`} className={classes.card} key={i}>
                 <img
                   className={classes.card__img}
-                  src={film.poster.url}
-                  alt={film.alternativeName}
+                  src={item.poster.url}
+                  alt={item.alternativeName}
                 />
-                <p>{film.name}</p>
-                <p>{film.year}</p>
-                <p>Рейтинт IMDB : {film.rating.imdb}</p>
-              </div>
+                <p>{item.name}</p>
+                <p>{item.year}</p>
+                {item.rating ? (
+                  <p> Рейтинт KP:{item.rating.kp.toFixed(1)}</p>
+                ) : null}
+              </Link>
             );
           })
         ) : (

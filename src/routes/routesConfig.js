@@ -1,7 +1,11 @@
+import FilmPage from "../components/FilmPage/FilmPagePrime/FilmPage";
 import NotFoundPage from "../components/NotFoundPage/NotFoundPage";
 import Online from "../components/Online/Online";
-import HomePage from "../containers/HomePage/HomePage";
 import Connect from "../containers/Connect/Connect";
+import HeaderActors from "../containers/HeaderContainer/HeaderActors/HeaderActors";
+import HeaderFavorite from "../containers/HeaderContainer/HeaderFavorite/HeaderFavorite";
+import HeaderTrend from "../containers/HeaderContainer/HeaderTrend/HeaderTrend";
+import HomePage from "../containers/HomePage/HomePage";
 import SubscribePrime from "./../containers/Subscribe/SubscribePrime/SubscribePrime";
 export const routes = [
   {
@@ -24,4 +28,24 @@ export const routes = [
     path: "/subscribe",
     element: <SubscribePrime />,
   },
+  {
+    path: "/film/:id",
+    element: <FilmPage />,
+  },
+  {
+    path: "/actors",
+    element: <HeaderActors />,
+  },
+  {
+    path: "/trends",
+    element: <HeaderTrend />,
+  },
+  {
+    path: "/favoritesMovie",
+    element: <HeaderFavorite />,
+  },
+  // {
+  //   path: "/primer",
+  //   element: <HeaderPrimer />,
+  // },
 ];

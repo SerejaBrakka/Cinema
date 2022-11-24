@@ -3,10 +3,11 @@ import HeaderSecond from "../../HeaderContainer/HeaderSecond/HeaderSecond";
 
 import GetFilms from "../../../components/GetFilms/GetFilms";
 import classes from "./SubscribePrime.module.css";
+import HeaderHOC from "../../../HOC/HeaderHOC/HeaderHOC";
 const SubscribePrime = () => {
   return (
     <div className={classes.wrapper}>
-      <HeaderSecond />
+      {/* <HeaderSecond /> */}
       <div className={classes.subscribe__wrapper}>
         <div className={classes.info}>
           <h2>Тысячи фильмов и сериалов онлайн за 99 Р в месяц</h2>
@@ -36,4 +37,4 @@ const SubscribePrime = () => {
   );
 };
 
-export default SubscribePrime;
+export default HeaderHOC(SubscribePrime);

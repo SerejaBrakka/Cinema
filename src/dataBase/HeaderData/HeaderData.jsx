@@ -36,6 +36,7 @@ export const data = [
       {
         name: "Тренды",
         src: <Trend />,
+        to: "/trends",
       },
       {
         name: "Премьеры",
@@ -44,6 +45,7 @@ export const data = [
       {
         name: "Избранные",
         src: <Star />,
+        to: "/favoritesMovie",
       },
     ],
   },
@@ -73,6 +75,7 @@ export const data = [
       {
         name: "Актеры",
         src: <Actor />,
+        to: "/actors",
       },
     ],
   },

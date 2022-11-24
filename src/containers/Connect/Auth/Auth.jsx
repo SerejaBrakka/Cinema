@@ -22,10 +22,9 @@ const Auth = () => {
 
     signInWithEmailAndPassword(auth, userEmail, userPassword)
       .then((userCredential) => {
-        console.log(userCredential);
         setLocalStorage("userEmail", userCredential.user.email);
         dispatch(SetUserAC(userCredential.user.email));
-        console.log(user);
+
         SetIsAuth(true);
         navigate("/");
       })

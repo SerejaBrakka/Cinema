@@ -7,8 +7,8 @@ const Main = () => {
   return (
     <div className={classes.main__container}>
       <MainPrimeSlider />
-      <MainTrending />
-      <MainActors />
+      <MainTrending name="Тренды" />
+      <MainActors max={10} />
     </div>
   );
 };

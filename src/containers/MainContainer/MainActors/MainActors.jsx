@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./MainActors.module.css";
 import { useState, useEffect } from "react";
-const MainActors = () => {
+const MainActors = ({ max }) => {
   const [actors, setActors] = useState([]);
 
   useEffect(() => {
@@ -11,13 +11,13 @@ const MainActors = () => {
       .then((res) => res.json())
       .then((res) => setActors(res.docs));
   }, []);
-  console.log(actors);
+
   return (
     <div className={classes.wrapper} id="#actors">
-      <h4>Best Actors</h4>
+      <h4>Известные актеры</h4>
       <div className={classes.acter__container}>
         {actors ? (
-          actors.map((e) => {
+          actors.slice(0, max).map((e) => {
             return (
               <div className={classes.card} key={e.name}>
                 <p>{e.name}</p>

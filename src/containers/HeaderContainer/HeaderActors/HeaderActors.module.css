@@ -1,0 +1,11 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  padding: var(--space-high);
+  overflow: hidden;
+}
+
+.actors__container {
+  width: 100%;
+  height: 100%;
+}

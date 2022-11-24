@@ -7,7 +7,7 @@ const RightSidebar = () => {
   return (
     <div className={classes.wrapper}>
       <Input placeholder={"Поиск"} />
-      <TopMovies />
+      <TopMovies name={"Популярные фильмы"} />
       <FavoriteMovies />
     </div>
   );

@@ -1,20 +1,31 @@
 import React from "react";
 import classes from "./FavoriteMovies.module.css";
 import { useSelector } from "react-redux";
+import TopMovies from "../TopMovies/TopMovies";
 const FavoriteMovies = () => {
   const user = useSelector((state) => state.UsersReducer.email);
+  let favoriteMovies = useSelector(
+    (state) => state.TrendingMoviesReducer.favoriteMovie
+  );
 
   return (
     <div className={classes.wrapper}>
       {user ? (
-        <>
-          <h4> Добро пожаловать, {user}</h4>
-          <p>Здесь будут избранные фильмы</p>
-        </>
+        <div className={classes.card__container}>
+          <h3> Добро пожаловать, {user}</h3>
+          <TopMovies
+            name={
+              favoriteMovies.length > 0
+                ? "Избранные фильмы"
+                : "Здесь будут избранные фильмы"
+            }
+            film={favoriteMovies}
+          />
+        </div>
       ) : (
         <>
           <h4>Избранное</h4>
-          <p>Для добавление в избранное необходимо авторизоваться </p>
+          <p>Для добавления в избранное необходимо авторизоваться </p>
         </>
       )}
     </div>

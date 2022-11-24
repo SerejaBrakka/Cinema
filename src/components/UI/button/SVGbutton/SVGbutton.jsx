@@ -1,18 +1,12 @@
 import classes from "./SVGbutton.module.css";
-const SVGbutton = ({ src, onClick, style, position, max }) => {
+const SVGbutton = ({ src, onClick, style, position, max, disabled }) => {
   return (
     <div
       onClick={onClick}
       className={classes.buttonNext}
-      style={{ display: position == max ? "none" : "flex" }}
+      style={{ display: disabled ? "none" : "flex" }}
     >
-      <img
-        src={src}
-        alt="slide"
-        onClick={onClick}
-        style={style}
-        className={classes.UIbutton}
-      />
+      <img src={src} alt="slide" style={style} className={classes.UIbutton} />
     </div>
   );
 };
