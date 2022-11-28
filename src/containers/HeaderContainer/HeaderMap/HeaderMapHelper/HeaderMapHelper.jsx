@@ -7,7 +7,7 @@ const HeaderMapHelper = ({ item }) => {
     <>
       {item.map((element) => {
         return (
-          <div key={element[0]} className={classes.wrapper}>
+          <nav key={element[0]} className={classes.wrapper}>
             <h3>{element[0]}</h3>
             <ul>
               {element[1].map((item) => {
@@ -24,7 +24,7 @@ const HeaderMapHelper = ({ item }) => {
                 );
               })}
             </ul>
-          </div>
+          </nav>
         );
       })}
     </>

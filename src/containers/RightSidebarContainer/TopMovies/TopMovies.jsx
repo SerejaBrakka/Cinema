@@ -19,14 +19,16 @@ const TopMovies = ({ name, film }) => {
               <Link to={`/film/${e.id}`} className={classes.card} key={i}>
                 <img
                   className={classes.image}
-                  src={e.poster.url}
+                  src={e.poster ? e.poster.url : null}
                   alt={e.name}
                 />
                 <div className={classes.card__info}>
                   <p>
-                    {e.name.slice(0, 20) === e.name
-                      ? e.name
-                      : e.name.slice(0, 20) + ".."}
+                    {e.name
+                      ? e.name.slice(0, 20) === e.name
+                        ? e.name
+                        : e.name.slice(0, 20) + ".."
+                      : null}
                   </p>
                   <span className={classes.star}>
                     <Star />

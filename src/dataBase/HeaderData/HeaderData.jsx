@@ -5,7 +5,7 @@ import { ReactComponent as Login } from "./img/login.svg";
 import { ReactComponent as Multfilm } from "./img/multfilm.svg";
 import { ReactComponent as Primer } from "./img/primer.svg";
 import { ReactComponent as Serial } from "./img/serial.svg";
-import { ReactComponent as Show } from "./img/show.svg";
+import { ReactComponent as Anime } from "./img/anime.svg";
 import { ReactComponent as Star } from "./img/star.svg";
 import { ReactComponent as Subscribe } from "./img/subscribe.svg";
 import { ReactComponent as Trend } from "./img/trend.svg";
@@ -41,6 +41,7 @@ export const data = [
       {
         name: "Премьеры",
         src: <Primer />,
+        to: "/premiere",
       },
       {
         name: "Избранные",
@@ -59,18 +60,22 @@ export const data = [
       {
         name: "Сериалы",
         src: <Serial />,
+        to: "/serial",
       },
       {
         name: "Фильмы",
         src: <Film />,
+        to: "/film",
       },
       {
-        name: "Шоу",
-        src: <Show />,
+        name: "Анимэ",
+        src: <Anime />,
+        to: "/anime",
       },
       {
         name: "Мультфильмы",
         src: <Multfilm />,
+        to: "/cartoon",
       },
       {
         name: "Актеры",

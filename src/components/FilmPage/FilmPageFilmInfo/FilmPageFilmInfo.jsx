@@ -25,7 +25,7 @@ const FilmPageFilmInfo = ({ film }) => {
       </p>
       <p>Описание: {film.description || "Отсутствует"}</p>
       <div className={classes.pDangerous}>
-        {film.facts.length > 3 ? (
+        {film.facts && film.facts.length > 3 ? (
           <div>
             Знаете ли вы что:
             {film.facts.slice(0, 3).map((e, i) => {

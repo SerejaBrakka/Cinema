@@ -1,6 +1,7 @@
 .mainSlider__wrapper {
   width: 100%;
   position: relative;
+  font-family: var(--font-family-main);
 }
 .main__item_info {
   position: absolute;

@@ -3,6 +3,9 @@
   height: 100vh;
   padding: var(--space-high);
   overflow: hidden;
+  font-family: var(--font-family-main);
+  color: var(--color-white);
+  box-sizing: border-box;
 }
 
 .items__container {

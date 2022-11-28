@@ -1,0 +1,22 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.wrapper {
+  padding: var(--space-high);
+  font-family: var(--font-family-main);
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.img {
+  width: 80%;
+  border-radius: var(--br-high);
+}
+
+.actorFilms {
+  margin-left: var(--space-high);
+}

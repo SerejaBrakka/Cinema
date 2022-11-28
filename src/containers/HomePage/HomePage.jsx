@@ -1,13 +1,20 @@
-import React from "react";
+import FooterMain from "../FooterContainer/FooterMain/Footer";
+import Footer from "../FooterContainer/FooterMain/Footer";
 import Header from "../HeaderContainer/HeaderPrime/Header";
 import Main from "../MainContainer/MainPrime/Main";
 import RightSidebar from "../RightSidebarContainer/RightSidebarPrime/RightSidebar";
+import classes from "./HomePage.module.css";
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <Main />
-      <RightSidebar />
+      <div className={classes.wrapper}>
+        <Header />
+        <Main />
+        <RightSidebar />
+      </div>
+      <div className={classes.footer}>
+        <FooterMain />
+      </div>
     </>
   );
 };

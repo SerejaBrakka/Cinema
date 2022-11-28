@@ -1,7 +1,7 @@
 import classes from "./Header.module.css";
 
 import { useState } from "react";
-import Accordeon from "../../../components/Accordeon/Accordeon";
+import Accordeon from "../Accordeon/Accordeon";
 import Logo from "../../../components/Logo/Logo";
 import Input from "../../../components/UI/Input/Input";
 import HeaderMap from "../HeaderMap/HeaderMap";

@@ -11,8 +11,7 @@
 }
 
 .video {
-  margin-top: var(--space-high);
+  margin: var(--space-high);
   width: 45vw;
   height: 60vh;
-  margin-right: var(--space-high);
 }

@@ -1,3 +1,9 @@
 .ratingInfo {
   padding: var(--space-high);
+  font-family: var(--font-family-main);
+}
+
+.ratingInfo a {
+  text-decoration: none;
+  color: var(--color-white);
 }

@@ -1,5 +1,6 @@
 .wrapper {
   width: 100%;
+  font-family: var(--font-family-main);
 }
 .acter__container {
   display: flex;
@@ -10,8 +11,14 @@
   width: 150px;
   height: 220px;
   border-radius: var(--br-high);
+  transition: var(--transition-standart);
 }
 
+.actor__photo:hover {
+  transform: scale(1.1);
+}
 .card {
   margin-right: var(--space-high);
+  text-decoration: none;
+  color: var(--color-white);
 }

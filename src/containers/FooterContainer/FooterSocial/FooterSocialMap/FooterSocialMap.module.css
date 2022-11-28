@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  justify-content: center;
+}
+.social__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--space-middle);
+}
+.social__card a {
+  text-decoration: none;
+  font-family: var(--font-family-main);
+  color: var(--color-white);
+}
+.social__card:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  stroke: var(--color-white);
+}
+.social__card:hover svg {
+  stroke: var(--color-white);
+}

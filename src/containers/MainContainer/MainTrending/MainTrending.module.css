@@ -1,6 +1,9 @@
 .wrapper {
   position: relative;
   width: 100%;
+  font-family: var(--font-family-main);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 .card__container {
   display: flex;
@@ -10,17 +13,17 @@
 }
 
 .card__img {
-  width: 160px;
+  width: 170px;
   height: 200px;
   border-radius: var(--br-high);
   transition: var(--transition-standart);
 }
 
 .card {
-  min-width: 170px;
-  margin-right: 20px;
+  margin-right: var(--space-high);
   transition: 1s;
   text-decoration: none;
+  max-width: 190px;
 }
 .button__container {
   display: flex;

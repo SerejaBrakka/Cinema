@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./FilmPageRatingInfo.module.css";
+import { Link } from "react-router-dom";
 const FilmPageRatingInfo = ({ film }) => {
   return (
     <div className={classes.ratingInfo}>
@@ -10,7 +11,11 @@ const FilmPageRatingInfo = ({ film }) => {
       <div>
         <h3>В главных ролях:</h3>
         {film.persons.slice(0, 10).map((e, i) => {
-          return <p key={i}>{e.name}</p>;
+          return (
+            <Link to={`/actor/${e.id}`} key={i}>
+              <p>{e.name}</p>
+            </Link>
+          );
         })}
       </div>
     </div>

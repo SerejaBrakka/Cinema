@@ -1,0 +1,19 @@
+.container {
+  width: 100vw;
+  height: 15px;
+  color: black;
+}
+
+.pagelink {
+  text-decoration: none;
+  margin: var(--space-high);
+}
+
+.pagelink:hover {
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.pagelink:active {
+  color: var(--color-white);
+}

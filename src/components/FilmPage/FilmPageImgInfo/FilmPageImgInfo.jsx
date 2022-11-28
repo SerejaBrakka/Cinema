@@ -1,6 +1,7 @@
 import classes from "./FilmPageImgInfo.module.css";
 import { useMemo } from "react";
-import AddToFavorites from "../../AddToFavorites/AddToFavorites";
+import AddToFavorites from "../AddToFavorites/AddToFavorites";
+import FilmPageGetImage from "../FilmPageGetImage/FilmPageGetImage";
 const FilmPageImgInfo = ({ film }) => {
   let result = useMemo(() => {
     let ssilka =
@@ -37,9 +38,13 @@ const FilmPageImgInfo = ({ film }) => {
               loop
               className={classes.video}
             ></iframe>
+            <FilmPageGetImage film={film} />
           </>
         ) : (
-          <img src={film.poster.url} className={classes.imgBig}></img>
+          <img
+            src={film.poster ? film.poster.url : null}
+            className={classes.imgBig}
+          ></img>
         )}
         <AddToFavorites film={film} />
       </div>

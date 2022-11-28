@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  gap: var(--space-high);
+  width: 95vw;
+  flex-wrap: wrap;
+  font-family: var(--font-family-main);
+  box-sizing: border-box;
+  padding: var(--space-high);
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 150px;
+  height: 200px;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.card {
+  width: 20%;
+}
