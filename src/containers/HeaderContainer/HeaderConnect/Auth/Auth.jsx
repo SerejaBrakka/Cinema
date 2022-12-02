@@ -48,7 +48,11 @@ const Auth = () => {
         placeholder={"Пароль"}
         type={"password"}
       />
-      <ConnectButton onClick={() => login()} value={"Войти"} />
+      <ConnectButton
+        onClick={() => login()}
+        value={"Войти"}
+        className={classes.button}
+      />
     </div>
   );
 };

@@ -1,13 +1,12 @@
-import React from "react";
-import classes from "./RightSideBarInputFindFilm.module.css";
 import { useState } from "react";
-import { useSelector } from "react-redux";
-import { SetFindedFilmsAc } from "../../redux/action/Actions";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import AllFindedFilms from "./AllFindedFilms/AllFindedFilms";
-import { useDispatch } from "react-redux";
-import { DeleteFindedFilmsAc } from "../../redux/action/Actions";
 import ConnectButton from "../../components/UI/button/ConnectButton/ConnectButton";
+import {
+  DeleteFindedFilmsAc,
+  SetFindedFilmsAc,
+} from "../../redux/action/Actions";
+import classes from "./RightSideBarInputFindFilm.module.css";
 const RightSideBarInputFindFilm = () => {
   let [value, setValue] = useState("");
 
@@ -25,12 +24,11 @@ const RightSideBarInputFindFilm = () => {
       .then((res) => res.json())
       .then((json) => dispatch(SetFindedFilmsAc(json.docs)))
       .then((res) => setLoading(false));
-   
 
     setIsHideTooltip(false);
   }
   const findedFilm = useSelector((state) => state.FindReducer.films);
-  
+
   return (
     <div className={classes.wrapper}>
       <input
@@ -39,6 +37,7 @@ const RightSideBarInputFindFilm = () => {
           setValue(e.target.value);
         }}
         className={classes.input}
+        placeholder={"Поиск фильма"}
       ></input>
       {value && <ConnectButton onClick={makeRequest} value={"Поиск"} />}
 
@@ -49,15 +48,15 @@ const RightSideBarInputFindFilm = () => {
           style={{ display: isHideTooltip ? "none" : "flex" }}
         >
           {findedFilm.length > 1 ? (
-            findedFilm.slice(0, 3).map((e) => {
+            findedFilm.slice(0, 6).map((e) => {
               return (
-                <div className={classes.card}>
+                <div className={classes.card} key={e.id}>
                   <Link to={`/film/${e.id}`}>
+                    <p>{e.name.slice(0, 20) + "..."}</p>
                     <img
                       src={e.poster ? e.poster.url : null}
-                      style={{ width: "100px", height: "120px" }}
+                      alt={"Фото не найдено :("}
                     />
-                    <p>{e.name.slice(0, 30) + "..."}</p>
                   </Link>
                 </div>
               );
@@ -67,7 +66,7 @@ const RightSideBarInputFindFilm = () => {
           ) : null}
 
           {findedFilm.length > 1 && !isHideTooltip ? (
-            <>
+            <div className={classes.button__container}>
               <Link to="/AllFindedFilms" className={classes.link}>
                 <ConnectButton value={"Все"} />
               </Link>
@@ -75,7 +74,7 @@ const RightSideBarInputFindFilm = () => {
                 onClick={() => setIsHideTooltip(true)}
                 value={"Скрыть"}
               />
-            </>
+            </div>
           ) : null}
         </div>
       )}

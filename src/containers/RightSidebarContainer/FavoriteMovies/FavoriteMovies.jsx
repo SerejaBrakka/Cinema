@@ -12,7 +12,11 @@ const FavoriteMovies = () => {
     <div className={classes.wrapper}>
       {user ? (
         <div className={classes.card__container}>
-          <h3> Добро пожаловать, {user}</h3>
+          <h3>
+            {" "}
+            Добро пожаловать,
+            <br /> {user}
+          </h3>
           <TopMovies
             name={
               favoriteMovies.length > 0

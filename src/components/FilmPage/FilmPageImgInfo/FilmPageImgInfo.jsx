@@ -37,6 +37,7 @@ const FilmPageImgInfo = ({ film }) => {
               controls
               loop
               className={classes.video}
+              title="video"
             ></iframe>
             <FilmPageGetImage film={film} />
           </>
@@ -44,6 +45,7 @@ const FilmPageImgInfo = ({ film }) => {
           <img
             src={film.poster ? film.poster.url : null}
             className={classes.imgBig}
+            alt={"Фото не найдено :("}
           ></img>
         )}
         <AddToFavorites film={film} />

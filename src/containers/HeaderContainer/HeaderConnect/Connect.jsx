@@ -1,17 +1,15 @@
-import Auth from "./Auth/Auth";
-import classes from "./Connect.module.css";
-import Login from "./Login/Login";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import Header from "../HeaderPrime/Header";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import ConnectButton from "../../../components/UI/button/ConnectButton/ConnectButton";
-import { useDispatch } from "react-redux";
+import HeaderHOC from "../../../HOC/HeaderHOC/HeaderHOC";
 import { DeleteUserAC } from "../../../redux/action/Actions";
 import {
   clearLocalStorage,
   getLocalStorageEmail,
 } from "../../../utils/localStorage";
+import Auth from "./Auth/Auth";
+import classes from "./Connect.module.css";
+import Login from "./Login/Login";
 const Connect = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -25,12 +23,15 @@ const Connect = () => {
 
   return (
     <div className={classes.wrapper}>
-      <Header />
       <div className={classes.wrapper__form}>
         {!!getLocalStorageEmail("userEmail").email ? (
           <div className={classes.logout}>
             <h2> Вы уже уходите ? {user}</h2>
-            <ConnectButton onClick={logout} value={"Выйти"} />
+            <ConnectButton
+              onClick={logout}
+              value={"Выйти"}
+              className={classes.button}
+            />
             <Link to="/">На главную</Link>
           </div>
         ) : (
@@ -44,4 +45,4 @@ const Connect = () => {
   );
 };
 
-export default Connect;
+export default HeaderHOC(Connect);

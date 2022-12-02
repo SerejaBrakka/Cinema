@@ -74,6 +74,9 @@
 }
 
 @media (max-width: 768px) {
+  .mainSlider__wrapper {
+    width: 95%;
+  }
   .main__item_info {
     margin-left: var(--space-middle);
   }

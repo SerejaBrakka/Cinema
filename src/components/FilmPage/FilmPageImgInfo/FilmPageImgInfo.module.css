@@ -15,3 +15,9 @@
   width: 45vw;
   height: 60vh;
 }
+
+@media (max-width: 768px) {
+  .video {
+    width: 90%;
+  }
+}

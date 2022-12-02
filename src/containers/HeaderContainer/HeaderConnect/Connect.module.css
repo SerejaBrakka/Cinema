@@ -1,6 +1,5 @@
 .wrapper {
   width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,4 +49,23 @@
 }
 .logout a:hover {
   color: var(--color-red);
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+  }
 }

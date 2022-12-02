@@ -1,8 +1,17 @@
 import { useState } from "react";
 import classes from "./Pagination.module.css";
-const Pagination = ({ paginate, itemsPerPage, totalItems }) => {
+import { FC } from "react";
+import { IPagination } from "./IPagination";
+
+const Pagination: FC<IPagination> = ({
+  paginate,
+  itemsPerPage,
+  totalItems,
+}) => {
+  let [currentNumber, setCurrentNumber] = useState<number>(1);
+
   const numbers = [];
-  let [currentNumber, setCurrentNumber] = useState(1);
+
   for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
     numbers.push(i);
   }
@@ -11,7 +20,7 @@ const Pagination = ({ paginate, itemsPerPage, totalItems }) => {
     <div className={classes.container}>
       {numbers.map((number, i) => {
         return (
-          <a
+          <p
             key={i}
             className={classes.pagelink}
             onClick={() => {
@@ -21,7 +30,7 @@ const Pagination = ({ paginate, itemsPerPage, totalItems }) => {
             style={{ color: currentNumber === i + 1 ? "white" : "black" }}
           >
             {number}
-          </a>
+          </p>
         );
       })}
     </div>

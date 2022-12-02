@@ -48,3 +48,12 @@ li a {
     margin-left: var(--space-high);
   }
 }
+
+@media (max-width: 1200px) {
+  .accordeon {
+    align-self: flex-start;
+  }
+  .content {
+    width: 100%;
+  }
+}

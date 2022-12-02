@@ -13,3 +13,14 @@
     width: 90%;
   }
 }
+
+@media (max-width: 1200px) {
+  .main__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: var(--space-high);
+    box-sizing: border-box;
+  }
+}

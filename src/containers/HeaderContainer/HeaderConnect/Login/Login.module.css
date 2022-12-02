@@ -36,3 +36,10 @@
 .reg button {
   margin-top: var(--space-middle);
 }
+
+@media (max-width: 768px) {
+  .reg {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

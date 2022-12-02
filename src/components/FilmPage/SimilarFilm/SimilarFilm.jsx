@@ -4,9 +4,9 @@ const SimilarFilm = ({ film }) => {
   return (
     <>
       {film.length > 1 ? (
-        <MainTrending film={film} width={"48vw"} name="Похожие фильмы" />
+        <MainTrending film={film} name="Похожие фильмы" />
       ) : (
-        <div style={{ height: "100vh" }}>
+        <div>
           <h3>Подобные фильмы не найдены</h3>
         </div>
       )}

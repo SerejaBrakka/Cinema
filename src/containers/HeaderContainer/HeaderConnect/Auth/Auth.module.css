@@ -28,3 +28,10 @@
   margin-top: var(--space-middle);
 }
 
+@media (max-width: 768px) {
+  .form__auth {
+    margin-top: 100px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

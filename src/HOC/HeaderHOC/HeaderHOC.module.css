@@ -1,8 +1,6 @@
 .wrapper {
-  width: 100vw;
-  height: 100vh;
   padding: var(--space-high);
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: var(--font-family-main);
   color: var(--color-white);
   box-sizing: border-box;

@@ -1,3 +1,23 @@
 .wrapper {
   display: flex;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 95vw;
+  }
+  .footer {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+}

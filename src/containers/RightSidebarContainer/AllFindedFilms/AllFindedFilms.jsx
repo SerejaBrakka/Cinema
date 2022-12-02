@@ -1,9 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { FC, useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import LinkBack from "../../../components/LinkBack/LinkBack";
 import classes from "./AllFindedFilms.module.css";
-import { useState } from "react";
 import Pagination from "./pagination/Pagination";
 const AllFindedFilms = () => {
   let [currentPage, setCurrentPage] = useState(1);

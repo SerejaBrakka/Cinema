@@ -5,20 +5,24 @@ import {
 } from "../../../redux/action/Actions";
 import ConnectButton from "../../UI/button/ConnectButton/ConnectButton";
 import classes from "./AddToFavorites.module.css";
-const AddToFavorites = ({ film }) => {
-  let favoriteMovies = useSelector(
+
+interface IFavouriteMovies {
+  TrendingMoviesReducer: { favoriteMovie: [{ id: number }] };
+}
+const AddToFavorites = ({ film }: any) => {
+  let favoriteMovies = useSelector<IFavouriteMovies, [{ id: number }]>(
     (state) => state.TrendingMoviesReducer.favoriteMovie
   );
-
-  const user = useSelector((state) => state.UsersReducer.email);
+  console.log(favoriteMovies);
+  const user = useSelector((state: any) => state.UsersReducer.email);
 
   const dispatch = useDispatch();
-  function addToFavorite(id) {
-    if (favoriteMovies.filter((e) => e === id).length === 0) {
+  function addToFavorite(id: number) {
+    if (favoriteMovies.filter((e) => e.id === id).length === 0) {
       dispatch(setMovieToFavoriteAC(id));
     }
   }
-  function deleteFromFavorite(id) {
+  function deleteFromFavorite(id: number) {
     dispatch(deleteMovieFromFavorite(id));
   }
   return (

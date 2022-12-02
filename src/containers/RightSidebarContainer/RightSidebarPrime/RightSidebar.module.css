@@ -8,3 +8,17 @@
   row-gap: 30px;
   font-family: var(--font-family-main);
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    width: 95vw;
+  }
+}
+@media (max-width: 1200px) {
+  .wrapper {
+    justify-content: flex-start;
+    width: 100vw;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+}

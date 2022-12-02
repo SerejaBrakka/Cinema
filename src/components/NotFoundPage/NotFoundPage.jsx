@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import classes from "./NotFoundPage.module.css";
+
 const NotFoundPage = () => {
   return (
-    <div style={{ color: "white" }}>
-      Sorry, page not found, go to <Link to="/">HomePage</Link>
+    <div className={classes.wrapper}>
+      <h1>
+        Sorry, page not found, go to <Link to="/">HomePage</Link>
+      </h1>
     </div>
   );
 };

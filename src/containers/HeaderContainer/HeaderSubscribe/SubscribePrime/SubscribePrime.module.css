@@ -1,6 +1,6 @@
 .subscribe__wrapper {
   box-sizing: border-box;
-  width: 90vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +10,7 @@
   font-family: var(--font-family-main);
   text-align: center;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .info span {
   font-size: var(--fontmid);
@@ -18,9 +19,18 @@
   width: 35vw;
 }
 .wrapper {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  margin-bottom: var(--space-high);
 }
 .subscribe__wrapper button {
   margin-bottom: var(--space-high);
+}
+
+@media (max-width: 768px) {
+  .info {
+    width: 80vw;
+  }
+  .subscribe__wrapper {
+    margin: 5px;
+  }
 }

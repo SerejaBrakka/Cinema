@@ -3,12 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import LinkBack from "../../LinkBack/LinkBack";
 import Loader from "../../Loader/Loader";
 import classes from "./ActorPage.module.css";
+import { IActorPage } from "./IActorPage";
+
 const ActorPage = () => {
-  const [actor, setActor] = useState("");
+  const [actor, setActor] = useState<IActorPage | null>(null);
   const param = useParams().id;
   useEffect(() => {
     fetch(
-      `https://api.kinopoisk.dev/person?field=id&search=${param}&token=ZQQ8GMN-TN54SGK-NB3MKEC-ZKB8V06`
+      `https://api.kinopoisk.dev/person?field=id&search=${param}&token=9NZGZJ6-BVA402G-JTB9TEF-GFP6Q9V`
     )
       .then((res) => res.json())
       .then((json) => setActor(json));
@@ -41,7 +43,7 @@ const ActorPage = () => {
               )}
             </p>
             <p>
-              Возраст:{" "}
+              Возраст:
               {actor.age !== 0
                 ? actor.age
                 : actor.birthday

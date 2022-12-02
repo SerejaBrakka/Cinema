@@ -45,3 +45,25 @@
   border: 3px solid gold;
   border-radius: 30px;
 }
+@media (max-width: 1200px) {
+  .modal {
+    width: 80vw;
+  }
+  .modal_content img {
+    width: 90%;
+    height: 60vh;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .modal {
+    width: 80vw;
+  }
+  .modal_content img {
+    width: 100%;
+    height: 50vh;
+  }
+}

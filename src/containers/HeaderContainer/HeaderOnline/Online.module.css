@@ -34,4 +34,18 @@
 .wrapper__video {
   object-fit: cover;
 }
+@media (max-width: 1200px) {
+  .wrapper_form {
+    width: 90%;
+    padding: var(--space-middle);
+    margin-top: 20vw;
+  }
+}
 
+@media (max-width: 768px) {
+  .wrapper_form {
+    width: 100%;
+    padding: var(--space-middle);
+    margin-top: 20vw;
+  }
+}

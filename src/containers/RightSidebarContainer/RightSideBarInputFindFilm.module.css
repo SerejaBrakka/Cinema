@@ -1,20 +1,24 @@
 .container {
   display: flex;
-  flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-top: var(--space-high);
   box-sizing: border-box;
   background: transparent;
-  justify-content: flex-start;
-  align-items: center;
   font-family: var(--font-family-main);
   padding-left: var(--space-high);
+  overflow: hidden;
 }
 
-.input {
-  width: 200px;
-  box-sizing: border-box;
+.button__container {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -23,6 +27,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .container a {
@@ -31,7 +36,13 @@
 }
 
 .card {
+  width: 40%;
+  height: 150px;
+  margin: var(--space-high);
+}
+.card img {
   width: 100%;
+  height: 100%;
 }
 
 .link {
@@ -46,7 +57,7 @@
   border: 2px solid var(--color-gray);
   opacity: 1;
   border-radius: var(--br-high);
-  height: 30px;
+  height: 45px;
   padding: var(--space-middle);
   color: var(--color-white);
   transition: 1s all;
@@ -56,4 +67,8 @@
 
 .input:focus {
   background: transparent;
+}
+
+.input::placeholder {
+  color: var(--color-white);
 }

@@ -67,3 +67,9 @@
 .star:active svg {
   stroke: var(--color-blue);
 }
+
+@media (max-width: 1200px) {
+  .wrapper {
+    height: auto;
+  }
+}

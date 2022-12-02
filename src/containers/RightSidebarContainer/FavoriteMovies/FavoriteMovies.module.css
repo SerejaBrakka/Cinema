@@ -12,7 +12,15 @@
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  padding: var(--space-high);
+  box-sizing: border-box;
 }
 .card__container h3 {
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    align-self: flex-start;
+  }
 }
