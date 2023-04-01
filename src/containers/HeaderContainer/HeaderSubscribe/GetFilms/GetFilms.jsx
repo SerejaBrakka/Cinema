@@ -1,7 +1,7 @@
-import { useEffect, useState, useMemo } from "react";
 import cn from "classnames";
-import classes from "./GetFilms.module.css";
+import { useEffect, useState } from "react";
 import Loader from "../../../../components/Loader/Loader";
+import classes from "./GetFilms.module.css";
 const GetFilms = ({ direction, year, img1, img }) => {
   let [filmsTop, setFilmsTop] = useState([]);
 
@@ -12,7 +12,7 @@ const GetFilms = ({ direction, year, img1, img }) => {
       .then((res) => res.json())
       .then((json) => setFilmsTop(json.docs))
       .catch((err) => console.log(err));
-  }, []);
+  }, [year]);
 
   return (
     <>
