@@ -13,7 +13,7 @@ const AddToFavorites = ({ film }: any) => {
   let favoriteMovies = useSelector<IFavouriteMovies, [{ id: number }]>(
     (state) => state.TrendingMoviesReducer.favoriteMovie
   );
-  console.log(favoriteMovies);
+
   const user = useSelector((state: any) => state.UsersReducer.email);
 
   const dispatch = useDispatch();

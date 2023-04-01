@@ -22,10 +22,11 @@ const GetFilms = ({ direction, year, img1, img }) => {
       >
         {filmsTop ? (
           filmsTop.map((e, i) => {
+            console.log(e);
             return (
               <img
                 key={i}
-                src={e.poster.previewUrl}
+                src={e.poster ? e.poster.previewUrl : null}
                 alt={e.name}
                 className={cn(classes[img], classes[img1])}
               />
